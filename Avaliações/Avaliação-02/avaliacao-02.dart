@@ -49,24 +49,20 @@ class EquipeProjeto {
 }
 
 void main() {
-  // 1. Criar vários objetos Dependentes
+
   var dependente1 = Dependente('Carlos');
   var dependente2 = Dependente('Ana');
   var dependente3 = Dependente('Pedro');
   var dependente4 = Dependente('Julia');
 
-  // 2. Criar vários objetos Funcionário
   var funcionario1 = Funcionario('João', [dependente1, dependente2]);
   var funcionario2 = Funcionario('Maria', [dependente3]);
   var funcionario3 = Funcionario('José', [dependente4]);
 
-  // 4. Criar uma lista de Funcionários
   var listaFuncionarios = [funcionario1, funcionario2, funcionario3];
 
-  // 5. Criar um objeto EquipeProjeto
   var equipeProjeto = EquipeProjeto('Projeto Dart Avançado', listaFuncionarios);
 
-  // 6. Printar no formato JSON o objeto EquipeProjeto
   String jsonEquipe = jsonEncode(equipeProjeto.toJson());
   print(jsonEquipe);
 }
